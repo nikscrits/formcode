@@ -31,32 +31,31 @@ id: 'mapbox.streets'
 }).addTo(mymap);
 }
 
-// create the code to get the Earthquakes data using an XMLHttpRequest
-function getEarthquakes() {
+
+function getPOIs() {
 	client = new XMLHttpRequest();
-	client.open('GET','https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson');
-	client.onreadystatechange = earthquakeResponse; // note don't use earthquakeResponse() with brackets as that doesn't work
+	client.open('GET','http://developer.cege.ucl.ac.uk:32088/getGeoJSON/united_kingdom_highway/geom');
+	client.onreadystatechange = POIresponse; // note don't use earthquakeResponse() with brackets as that doesn't work
 	client.send();
 }
 
-function earthquakeResponse() {
+
+function POIresponse() {
 	// this function listens out for the server to say that the data is ready - i.e. has state 4
 	if (client.readyState == 4) {
 		// once the data is ready, process the data
-		var earthquakedata = client.responseText;
-		loadEarthquakelayer(earthquakedata);
+		var POIdata = client.responseText;
+		loadPOIlayer(POIdata);
 	}
 }
-	
-// convert the received data - which is text - to JSON format and add it to the map
-function loadEarthquakelayer(earthquakedata) {
-	alert("Loading Earthquakes");
+
+function loadPOIlayer(POIdata) {
 	
 	// convert the text to JSON
-	var earthquakejson = JSON.parse(earthquakedata);
+	var POIjson = JSON.parse(POIdata);
 	
 	//load the geoJSON layer using custom icons
-	var earthquakelayer = L.geoJson(earthquakejson,
+	var POIlayer = L.geoJson(POIjson,
 	{
 		//use point to layer to create the points
 		pointToLayer:function(feature,latlng)
@@ -65,35 +64,9 @@ function loadEarthquakelayer(earthquakedata) {
 			//earthquake magnitude and use a different marker depending on this value
 			//also include a pop-up that shows the place value of the earthquake
 			
-			if(feature.properties.mag > 5.00) {
-				return L.marker(latlng, {icon:testMarkerDRed}).bindPopup("<b>"+"Place: "+feature.properties.place
-				+"<br>"+"Magnitude: "+feature.properties.mag+"</b>");
-			}
-			else if (feature.properties.mag > 3.00) {
-				return L.marker(latlng, {icon:testMarkerRed}).bindPopup("<b>"+"Place: "+feature.properties.place
-				+"<br>"+"Magnitude: "+feature.properties.mag+"</b>");
-
-			}
-			else if (feature.properties.mag > 1.75) {
-				return L.marker(latlng, {icon:testMarkerOrange}).bindPopup("<b>"+"Place: "+feature.properties.place
-				+"<br>"+"Magnitude: "+feature.properties.mag+"</b>");
-
-			}
-			else {
-				//magnitude is 1.75 or less
-				return L.marker(latlng, {icon:testMarkerGreen}).bindPopup("<b>"+"Place: "+feature.properties.place
-				+"<br>"+"Magnitude: "+feature.properties.mag+"</b>");;
-			}
+			return L.marker(latlng, {icon:testMarkerDRed}).bindPopup("POI");;
 		},
 	}).addTo(mymap);
 	
-	mymap.fitBounds(earthquakelayer.getBounds());
-}
-
-// make sure that there is a variable for the earthquake layer to be referenced by
-// this should be GLOBAL – i.e. not inside a function – so that any code can see the variable
-var earthquakelayer;
-function removeEarthquakes() {
-	alert("Earthquake data will be removed");
-	mymap.removeLayer(earthquakelayer);
+	mymap.fitBounds(POIlayer.getBounds());
 }
