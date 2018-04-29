@@ -1,13 +1,22 @@
 function startDataUpload() {
 	alert ("start data upload");
 
-	var name = document.getElementById("name").value;
-	var surname = document.getElementById("surname").value;
-	var module = document.getElementById("module").value;
+	var pointname = document.getElementById("pointname").value;
+	var question = document.getElementById("question").value;
 
-	alert(name + " "+ surname + " "+module);
+	var answer1 = document.getElementById("answer1").value;
+	var answer2 = document.getElementById("answer2").value;
+	var answer3 = document.getElementById("answer3").value;
+	var answer4 = document.getElementById("answer4").value;
 
-	var postString = "name="+name +"&surname="+surname+"&module="+module;
+	var lat = document.getElementById("lat").value;
+	var long = document.getElementById("long").value;
+
+
+	alert(pointname + "\n"+ question + "\n"+ answer1 + " " + answer2 + " " 
+		+ answer3 + " " + answer4 "\n" + lat + " " + long);
+
+	var postString = "pointname="+pointname +"&question="+question;
 
 	processData(postString);
 }
