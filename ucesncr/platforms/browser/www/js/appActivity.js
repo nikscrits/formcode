@@ -72,8 +72,6 @@ function loadPOIlayer(POIdata) {
 
 
 mymap.on('click', function(e) {
-	alert("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng)
-
 	document.getElementById("lat").value = e.latlng.lat;
 	document.getElementById("long").value = e.latlng.lng;
 });
