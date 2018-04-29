@@ -12,11 +12,28 @@ function startDataUpload() {
 	var lat = document.getElementById("lat").value;
 	var long = document.getElementById("long").value;
 
-
 	alert(pointname + "\n"+ question + "\n"+ answer1 + " " + answer2 + " " 
 		+ answer3 + " " + answer4 "\n" + lat + " " + long);
 
-	var postString = "pointname="+pointname +"&question="+question;
+	var postString = "pointname="+pointname +"&question="+question
+	+"&answer1="+answer1+"&answer2="+answer2
+	+"&answer3="+answer3+"&answer4="+answer4;
+
+	// now get the radio button values
+if (document.getElementById("check2").checked) {
+        postString=postString+"&correctanswer=1";
+}
+if (document.getElementById("check2").checked) {
+	postString=postString+"&correctanswer=2";
+}
+if (document.getElementById("check3").checked) {
+	postString=postString+"&correctanswer=3";
+}
+if (document.getElementById("check4").checked) {
+	postString=postString+"&correctanswer=4";
+}
+
+postString = postString + "&lat=" + latitude + "&long=" + longitude;
 
 	processData(postString);
 }
