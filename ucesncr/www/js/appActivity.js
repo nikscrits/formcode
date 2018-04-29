@@ -79,4 +79,15 @@ mymap.on('click', function(e) {
 });
 
 
+function resetForm() {
+	document.getElementById("pointname").value = "";
+	document.getElementById("question").value = "";
+	document.getElementById("answer1").value = "";
+	document.getElementById("answer2").value = "";
+	document.getElementById("answer3").value = "";
+	document.getElementById("answer4").value = "";
+	document.getElementById("lat").value = "";
+	document.getElementById("long").value = "";
+}
+
 
