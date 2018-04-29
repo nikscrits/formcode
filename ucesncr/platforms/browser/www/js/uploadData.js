@@ -1,3 +1,24 @@
+function validateData() {
+        var a=document.getElementById("pointname").value;
+        var b=document.getElementById("question").value;
+        var c=document.getElementById("answer1").value;
+        var d=document.getElementById("answer2").value;
+        var e=document.getElementById("answer3").value;
+        var f=document.getElementById("answer4").value;
+        var g=document.getElementById("answer1").value;
+        var h=document.getElementById("answer2").value;    
+
+        if (a==null || a=="",b==null || b=="",c==null || c=="",d==null || d=="")
+        {
+            alert("Please fill in all fields.");
+            return false;
+        }
+        else
+        {
+        	startDataUpload()
+        }
+}
+
 function startDataUpload() {
 	alert ("start data upload");
 
