@@ -31,7 +31,6 @@ id: 'mapbox.streets'
 }).addTo(mymap);
 }
 
-
 function getPOIs() {
 	client = new XMLHttpRequest();
 	client.open('GET','http://developer.cege.ucl.ac.uk:32088/getGeoJSON/united_kingdom_highway/geom');
@@ -70,3 +69,14 @@ function loadPOIlayer(POIdata) {
 	
 	mymap.fitBounds(POIlayer.getBounds());
 }
+
+
+mymap.on('click', function(e) {
+	alert("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng)
+
+	document.getElementById("lat").value = e.latlng.lat;
+	document.getElementById("long").value = e.latlng.lng;
+});
+
+
+
