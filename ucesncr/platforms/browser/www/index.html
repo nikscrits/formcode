@@ -17,6 +17,7 @@
 -->
 
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -84,23 +85,6 @@
         <div class="mdl-layout__header-row">
           <span class="mdl-layout-title">Map</span>
           <div class="mdl-layout-spacer"></div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
-              <i class="material-icons">search</i>
-            </label>
-            <div class="mdl-textfield__expandable-holder">
-              <input class="mdl-textfield__input" type="text" id="search">
-              <label class="mdl-textfield__label" for="search">Enter your query...</label>
-            </div>
-          </div>
-          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
-            <i class="material-icons">more_vert</i>
-          </button>
-          <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
-            <li class="mdl-menu__item">About</li>
-            <li class="mdl-menu__item">Contact</li>
-            <li class="mdl-menu__item">Legal information</li>
-          </ul>
         </div>
       </header>
 	  
@@ -147,15 +131,20 @@
 			<!--the legendid div will hold the map legend -->
 
       <label for="name">Name</label><input type="text" size="25" id="name"/><br/>
-      <label for="name">Surname</label><input type="text" size="25" id="surname"/><br/>
-      <label for="name">Module</label><input type="text" size="25" id="module"/><br/>
+      <label for="surname">Surname</label><input type="text" size="25" id="surname"/><br/>
+      <label for="module">Module</label><input type="text" size="25" id="module"/><br/>
 
 
       <button id="startUpload" onclick="startDataUpload()">Start Data Upload</button>
 
+
+    <br />
+    <div id="dataUploadResult">The result of the upload goes here</div>
+
+
+
 			</div
 			
-
       </main>
     </div>
 	  
