@@ -12,11 +12,27 @@ function startDataUpload() {
 	var lat = document.getElementById("lat").value;
 	var long = document.getElementById("long").value;
 
+	alert(pointname + " "+ question + " \n"+ answer1 + " " + answer2 + " " + answer3 + " " + answer4 + " \n" + lat + " " + long);
 
-	alert(pointname + "\n"+ question + "\n"+ answer1 + " " + answer2 + " " 
-		+ answer3 + " " + answer4 "\n" + lat + " " + long);
+	var postString = "pointname="+pointname +"&question="+question +"&answer1="+answer1 +"&answer2="+answer2 +"&answer3="+answer3+ "&answer4="+answer4;
 
-	var postString = "pointname="+pointname +"&question="+question;
+	// now get the radio button values
+	if (document.getElementById("check1").checked) {
+        postString=postString+"&correctanswer=1";
+    }
+    if (document.getElementById("check2").checked) {
+    	postString=postString+"&correctanswer=2";
+    }
+	if (document.getElementById("check3").checked) {
+		postString=postString+"&correctanswer=3";
+	}
+	if (document.getElementById("check4").checked) {
+		postString=postString+"&correctanswer=4";
+	}
+
+	postString = postString + "&lat=" + lat + "&long=" + long;
+
+	alert (postString);
 
 	processData(postString);
 }
@@ -30,6 +46,7 @@ function processData(postString) {
    client.onreadystatechange = dataUploaded;  
    client.send(postString);
 }
+
 // create the code to wait for the response from the data server, and process the response once it is received
 function dataUploaded() {
   // this function listens out for the server to say that the data is ready - i.e. has state 4
