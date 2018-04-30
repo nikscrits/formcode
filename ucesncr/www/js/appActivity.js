@@ -1,26 +1,6 @@
 var client;
 var mymap = L.map('mapid').setView([51.505, -0.09], 13);
 
-var testMarkerDRed = L.AwesomeMarkers.icon({ 
-	icon: 'play',
-	markerColor: 'darkred'
-	});
-	
-var testMarkerRed = L.AwesomeMarkers.icon({ 
-	icon: 'play',
-	markerColor: 'red'
-	});
-	
-var testMarkerGreen = L.AwesomeMarkers.icon({
-	icon: 'play',
-	markerColor: 'darkgreen'
-	}); 
- 
-var testMarkerOrange = L.AwesomeMarkers.icon({
-	icon: 'play',
-	markerColor: 'orange'
-	}); 
-	
 function loadMap() {	// load the tiles
 	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw',{
 	maxZoom: 18,
@@ -37,7 +17,6 @@ function getPOIs() {
 	client.onreadystatechange = POIresponse; // note don't use earthquakeResponse() with brackets as that doesn't work
 	client.send();
 }
-
 
 function POIresponse() {
 	// this function listens out for the server to say that the data is ready - i.e. has state 4
@@ -108,9 +87,9 @@ function resetForm() {
 }
 
 	// create custom red marker
-	var testMarkerRed = L.AwesomeMarkers.icon({
+	var markerOrange = L.AwesomeMarkers.icon({
 	icon: 'play',
-	markerColor: 'red'
+	markerColor: 'orange'
 });
 
 	// create the code to wait for the response from the data server, and process the response once it is received
