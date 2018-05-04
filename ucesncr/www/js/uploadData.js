@@ -52,9 +52,7 @@ function startDataUpload() {
 	}
 
 	postString = postString + "&lat=" + lat + "&long=" + long;
-
-	alert (postString);
-
+	alert(postString);
 	processData(postString);
 }
 
