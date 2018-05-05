@@ -33,7 +33,7 @@ function startDataUpload() {
 	var lat = document.getElementById("lat").value;
 	var long = document.getElementById("long").value;
 
-	alert(pointname + " "+ question + " \n"+ answer1 + " " + answer2 + " " + answer3 + " " + answer4 + " \n" + lat + " " + long);
+	alert("Submitting: " + pointname + "\n"+ question + " \n"+ answer1 + " " + answer2 + " " + answer3 + " " + answer4 + " \n" + lat + " " + long);
 
 	var postString = "pointname="+pointname +"&question="+question +"&answer1="+answer1 +"&answer2="+answer2 +"&answer3="+answer3+ "&answer4="+answer4;
 
@@ -52,7 +52,6 @@ function startDataUpload() {
 	}
 
 	postString = postString + "&lat=" + lat + "&long=" + long;
-	alert(postString);
 	processData(postString);
 }
 
@@ -70,7 +69,7 @@ function processData(postString) {
 function dataUploaded() {
   // this function listens out for the server to say that the data is ready - i.e. has state 4
   if (client.readyState == 4) {
-    // change the DIV to show the response
-    document.getElementById("dataUploadResult").innerHTML = client.responseText;
+    //Show an alert with the response text
+    alert(client.responseText);
     }
 }
