@@ -92,14 +92,23 @@
              <div class = "mdl-grid">
 
                <div class = "mdl-cell mdl-cell--6-col graybox">
-                <label for="pointname">Point Name:  </label><input type="text" size="25" id="pointname" maxlength="50"/><br/>
+                <label for="pointname">Point Name:  </label><input type="text" size="25" id="pointname" maxlength="50" onkeyup="countChars('pointname','namecharcount');" onkeydown="countChars('pointname','namecharcount');" onmouseout="countChars('pointname','namecharcount');"/>
+                <span id="namecharcount" style="color:red">0</span><span id="outof" style="color:red">/50</span><br/>
 
-                <label for="question">Question:  </label><input type="text" size="25" id="question" maxlength="200"/><br/>
+                <label for="question">Question:  </label><input type="text" size="25" id="question" maxlength="200" onkeyup="countChars('question','questcharcount');" onkeydown="countChars('question','questcharcount');" onmouseout="countChars('question','questcharcount');"/>
+                <span id="questcharcount" style="color:red">0</span><span id="outof" style="color:red">/200</span><br/>
 
-                <label for="answer1">Answer 1:  </label><input type="text" size="25" id="answer1" maxlength="50"/><br/>
-                <label for="answer2">Answer 2:  </label><input type="text" size="25" id="answer2" maxlength="50"/><br/>
-                <label for="answer3">Answer 3:  </label><input type="text" size="25" id="answer3" maxlength="50"/><br/>
-                <label for="answer4">Answer 4:  </label><input type="text" size="25" id="answer4" maxlength="50"/><br/>                
+                <label for="answer1">Answer 1:  </label><input type="text" size="25" id="answer1" maxlength="50" onkeyup="countChars('answer1','answer1charcount');" onkeydown="countChars('answer1','answer1charcount');" onmouseout="countChars('answer1','answer1charcount');"/>
+                <span id="answer1charcount" style="color:red">0</span><span id="outof" style="color:red">/50</span><br/>
+
+                <label for="answer2">Answer 2:  </label><input type="text" size="25" id="answer2" maxlength="50" onkeyup="countChars('answer2','answer2charcount');" onkeydown="countChars('answer2','answer2charcount');" onmouseout="countChars('answer2','answer2charcount');"/>
+                <span id="answer2charcount" style="color:red">0</span><span id="outof" style="color:red">/50</span><br/>
+
+                <label for="answer3">Answer 3:  </label><input type="text" size="25" id="answer3" maxlength="50" onkeyup="countChars('answer3','answer3charcount');" onkeydown="countChars('answer3','answer3charcount');" onmouseout="countChars('answer3','answer3charcount');"/>
+                <span id="answer3charcount" style="color:red">0</span><span id="outof" style="color:red">/50</span><br/>
+
+                <label for="answer4">Answer 4:  </label><input type="text" size="25" id="answer4" maxlength="50" onkeyup="countChars('answer4','answer4charcount');" onkeydown="countChars('answer4','answer4charcount');" onmouseout="countChars('answer4','answer4charcount');"/>
+                <span id="answer4charcount" style="color:red">0</span><span id="outof" style="color:red">/50</span><br/>
 
                 <label for="lat">Point latitude:  </label><input type="text" size="25" id="lat"/><br/>
                 <label for="long">Point longitude:  </label><input type="text" size="25" id="long"/><br/>

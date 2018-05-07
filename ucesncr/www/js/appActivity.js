@@ -35,6 +35,13 @@ function resetForm() {
 	document.getElementById("answer4").value = "";
 	document.getElementById("lat").value = "";
 	document.getElementById("long").value = "";
+
+	document.getElementById("namecharcount").innerHTML = "0";
+	document.getElementById("questcharcount").innerHTML = "0";
+	document.getElementById("answer1charcount").innerHTML = "0";
+	document.getElementById("answer2charcount").innerHTML = "0";
+	document.getElementById("answer3charcount").innerHTML = "0";
+	document.getElementById("answer4charcount").innerHTML = "0";
 }
 	
 //Create a variable that will hold the XMLHttpRequest()
@@ -85,6 +92,10 @@ function loadQuestionLayer(questionData) {
 	mymap.fitBounds(questionsLayer.getBounds());
 }
 
-
-
+//Counts the characters that have been entered into the text box
+//This aims to prevent the user from entering a value too long for the database
+function countChars(countTextBox, printTextBox) {
+  var charLen = document.getElementById(countTextBox).value.length;
+  document.getElementById(printTextBox).innerHTML = charLen;
+}
 
