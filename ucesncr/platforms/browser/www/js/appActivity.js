@@ -94,6 +94,7 @@ function loadQuestionLayer(questionData) {
 
 //Counts the characters that have been entered into the text box
 //This aims to prevent the user from entering a value too long for the database
+//Adapted from: https://stackoverflow.com/questions/9767521/count-and-display-number-of-characters-in-a-textbox-using-javascript
 function countChars(countTextBox, printTextBox) {
   var charLen = document.getElementById(countTextBox).value.length;
   document.getElementById(printTextBox).innerHTML = charLen;

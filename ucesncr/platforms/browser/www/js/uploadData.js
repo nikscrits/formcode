@@ -7,7 +7,7 @@ function validateData() {
         var e=document.getElementById("answer3").value;
         var f=document.getElementById("answer4").value;    
 
-        if (a==null || a=="" || b==""|| c=="" || d=="" || e=="" || f == "")
+        if (a=="" || b==""|| c=="" || d=="" || e=="" || f == "")
         {
             alert("Please fill in all fields.");
             return false;
