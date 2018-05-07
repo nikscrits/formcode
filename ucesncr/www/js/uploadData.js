@@ -20,7 +20,6 @@ function validateData() {
 }
 
 function startDataUpload() {
-	alert ("start data upload");
 
 	var pointname = document.getElementById("pointname").value;
 	var question = document.getElementById("question").value;
