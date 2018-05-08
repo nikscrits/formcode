@@ -9,4 +9,4 @@ This repository contains the code used to create a phonegap app that is an admin
 
 It can be accessed from [this link](https://http://developer.cege.ucl.ac.uk:31288/) when both the [httpServer.js](https://github.com/nikscrits/server) and the phonegap server (found in the 'ucesncr' file of this repo) are running. The user help guide for the web application can be found here.
 
-<img src="https://github.com/nikscrits/server/blob/master/screenshots/webapp.png" width="500">
+<img src="https://github.com/nikscrits/server/blob/master/screenshots/webapp.png" width="700">
