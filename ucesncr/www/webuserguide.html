@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+<head>
+<style>
+#p01 {
+    color: Black;
+     text-indent: 50px;
+Font-size: 14px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    color: Black;
+    Font-size: 16px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    color: Black;
+    Font-size: 18px;
+Font-style: italic;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: Black;
+    Font-size: 22px;
+Font-weight: bold;
+font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+<title>Location Quiz App - Question User Guide</title>
+</head
+
+
+<h1> Location Quiz App - Question User Guide </h1>
+
+<body>
+<h2>Displaying Questions Already Set: </h2>
+<text area>
+•	Firstly, ensure the httpServer.js is running. This can be found in the server repository (https://github.com/nikscrits/server)
+<p>
+•	Press the ‘Show Points’ button at the bottom of the page.
+
+<p>
+•	The questions will appear as orange markers on the map.
+
+<p align="center"><img href="images/image007.png" width="500"></p>
+
+<p>
+•	Click on any marker in order to see its Point name and Question information. Additionally, the zoom function on the map can be used to view points in more detail.
+<p>
+<h2>Submitting a New Question </h2>
+<p>
+•	Fill in each of the text boxes in the form at the bottom left of the webpage. Note: ensure you fill in every text box or the question will not upload and an alert will show. This involves adding the following information:
+<p id = 1>
+1. A question – this can include letters, numbers and punctuation. It must be under 200 characters in length.
+2. Four potential answers to the question – this should include the correct answer as one of the options. This can include letters, numbers and punctuation. It must be under 50 characters in length.
+3. The question location longitude and latitude – this can be entered manually or by clicking on the location on the map.
+4. The correct answer – the relevant radio button should be selected indicating which answer is correct.
+</p>
+
+<p align="center"><img href="images/image017.png" width="200"></p>
+
+<p>
+•	Check the radio button that represents the correct answer.
+<p>
+•	Click on the leaflet map in the exact position where the intended question is located to populate the longitude and latitude text boxes. Alternately, you can fill in these boxes manually if you know these details.
+<p>
+•	If you wish to reset the form and start entering the details again, press the ‘Reset Form’ button.
+<p>
+•	Click the ‘Upload Question’ button to send the question to the database. 
+<p>
+•	In order to view this new question point, refresh the webpage and click the ‘Get Questions’ button.
+
+</text area>
+</body>
+</html>
