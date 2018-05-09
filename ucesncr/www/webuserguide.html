@@ -32,13 +32,13 @@ h1 {
 	text-align: center;
 }
 </style>
-<title>Location Quiz App - Question User Guide</title>
+<title>Location Based Quiz User Guide</title>
 </head>
 
-<h1> Location Quiz App - Question User Guide </h1>
+<h1> User Guide: Location Based Quiz - Question Setting App </h1>
 
 <body>
-<h2>Displaying Questions Already Set: </h2>
+<h2>Displaying Questions Already Set</h2>
 <text area>
 <p>
 •	Firstly, ensure the httpServer.js is running. This can be found in the server repository (https://github.com/nikscrits/server)
@@ -46,16 +46,16 @@ h1 {
 •	Press the ‘Show Points’ button at the bottom of the page.
 
 <p>
-•	The questions will appear as orange markers on the map (see image below).
+•	The questions will appear as orange markers on the map and the map will automatically pan to give a view showing all of the question markers (see image below).
 
 <p align="center"><img src="https://github.com/nikscrits/questions/blob/master/ucesncr/www/images/image007.png?raw=true" width="700"></p>
 
 <p>
 •	Click on any marker in order to see its Point name and Question information. Additionally, the zoom function on the map can be used to view points in more detail.
 <p>
-<h2>Submitting a New Question </h2>
+<h2>Submitting a New Question</h2>
 <p>
-•	Fill in each of the text boxes in the form at the bottom left of the webpage (see image below). Note: ensure you fill in every text box or the question will not upload and an alert will show. This involves adding the following information:
+•	To create new questions for the user to answer the form at the bottom of the page must be filled out (see image below). Note: ensure you fill in every text box or the question will not upload and an alert will show. This involves filling in the following information:
 <p id = "indent">
 	1. A question - this can include letters, numbers and punctuation. It must be under 200 characters in length.
 </p>
@@ -72,15 +72,11 @@ h1 {
 <p align="center"><img src="https://github.com/nikscrits/questions/blob/master/ucesncr/www/images/image017.png?raw=true" width="500"></p>
 
 <p>
-•	Check the radio button that represents the correct answer.
+•	If you wish to clear the form to start entering the details again, press the ‘Reset Form’ button.
 <p>
-•	Click on the leaflet map in the exact position where the intended question is located to populate the longitude and latitude text boxes. Alternately, you can fill in these boxes manually if you know these details.
+•	Click the ‘Upload Question’ button to send the question to the database. Two alerts will then be presented. The first alert shows the data that will be sent to the databse and the second shows that the data has been successfully added.
 <p>
-•	If you wish to reset the form and start entering the details again, press the ‘Reset Form’ button.
-<p>
-•	Click the ‘Upload Question’ button to send the question to the database. 
-<p>
-•	In order to view this new question point, refresh the webpage and click the ‘Get Questions’ button (see image below).
+•	In order to view this new question point, refresh the webpage and click the ‘Show Points’ button. The point that has been added should now appear as a marker (see image below).
 
 <p align="center"><img src="https://github.com/nikscrits/questions/blob/master/ucesncr/www/images/image019.png?raw=true" width="400"></p>
 
